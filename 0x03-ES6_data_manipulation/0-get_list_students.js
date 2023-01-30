@@ -7,7 +7,7 @@ const getListStudents = () => {
     },
     {
       id: 2,
-      firstName: 'james',
+      firstName: 'James',
       location: 'Columbia',
     },
     {
