@@ -3,8 +3,8 @@ const updateStudentGradeByCity = (list = [], city, newGrade = []) => {
   const newList = list.filter((x) => x.location === city);
 
   newList.map((l) => {
-    let grades = newGrade.filter((x) => x.studentId === l.id);
-    let dict = { ...l };
+    const grades = newGrade.filter((x) => x.studentId === l.id);
+    const dict = { ...l };
     if (grades.length > 0) {
       dict.grade = grades[0].grade;
     } else {
