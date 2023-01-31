@@ -1,12 +1,9 @@
-const cleanSet = (set, str) => {
-  const arr = [];
-  for (key in set) {
-    if (set[key].include(str)) {
-      arr.push(set[key]);
-    }
-  }
-
-  console.log("arr", arr);
-};
-
-export default cleanSet;
+export default function cleanSet(set, startString) {
+  let result = "";
+  if (!startString || !startString.length) return result;
+  set.forEach((i) => {
+    if (i && i.startsWith(startString))
+      result += `${i.slice(startString.length)}-`;
+  });
+  return result.slice(0, result.length - 1);
+}
