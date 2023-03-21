@@ -106,7 +106,4 @@ app.listen(PORT, HOST, () => {
   console.log(`server running on ${HOST}:${PORT}`);
 });
 
-module.exports = {
-  countStudents,
-  app
-};
+module.exports = app;
