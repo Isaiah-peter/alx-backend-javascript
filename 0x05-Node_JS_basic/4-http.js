@@ -12,4 +12,6 @@ app.on('request', (_, res) => {
   res.write(Buffer.from(ouput));
 });
 
-app.listen(PORT);
+app.listen(PORT, 'localhost', () => {
+  console.log(`server running on localhost:${PORT}`);
+});
